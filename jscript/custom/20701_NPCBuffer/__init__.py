@@ -26,7 +26,7 @@ class Quest (JQuest) :
 
 	def onEvent (self,event,st):
 		htmltext = event
-		InitialHtml = event + ".htm"
+		#InitialHtml = event + ".htm"
 		count=st.getQuestItemsCount(ADENA_ID)
 		if count < 0  or st.getPlayer().getLevel() < 1 :
 			htmltext = "<html><head><body>Voce nao tem Adena,<br> Ou esta com level muito baixo. Tem que ter level 40 ou mais.</body></html>"
