@@ -15,7 +15,7 @@ ADENA_ID=57
 QuestId     = 20701
 QuestName   = "NPCBuffer"
 QuestDesc   = "custom"
-InitialHtml = "1.htm"
+InitialHtml = "2.htm"
 
 print "============> Buffer Free: LOADED"
 
@@ -26,6 +26,7 @@ class Quest (JQuest) :
 
 	def onEvent (self,event,st):
 		htmltext = event
+		InitialHtml = event + ".htm"
 		count=st.getQuestItemsCount(ADENA_ID)
 		if count < 0  or st.getPlayer().getLevel() < 1 :
 			htmltext = "<html><head><body>Voce nao tem Adena,<br> Ou esta com level muito baixo. Tem que ter level 40 ou mais.</body></html>"
